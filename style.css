@@ -1,0 +1,202 @@
+/* Colors */
+:root {
+  --burnt-orange: #C1440E;
+  --honey-bronze: #E8A33D;
+  --graphite: #2B2B2B;
+  --old-lace: #F5EDE0;
+  --salmon: #F2A08C;
+}
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+/* Skip-link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem 1.5rem;
+  background: var(--honey-bronze);
+  color: var(--graphite);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+/* Body */
+body {
+  font-family: "Huninn", sans-serif;
+  line-height: 1.8;
+  background-color: var(--honey-bronze);
+  color: var(--graphite);
+}
+/* Headings */
+h1, h2, h3 {
+  font-family: "Poetsen One", sans-serif;
+  color: var(--burnt-orange);
+}
+h1 {
+  color: var(--honey-bronze);
+}
+/* Page Header */
+#page-header {
+  background-color: var(--graphite);
+  border-color: var(--burnt-orange);
+  padding: 40px;
+  text-align: center;
+  color: var(--old-lace);
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border-style: double;
+  border-width: 6px;
+}
+/* Navigation */
+.nav-list a {
+  text-decoration: none;
+  color: inherit;
+  transition: ease 0.3s;
+  display: inline-block;
+  padding: .5rem;
+}
+.nav-list {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a:hover {
+  color: var(--honey-bronze);
+  transform: translateY(-5px);
+}
+.nav-list a:focus {
+  outline: 3px var(--old-lace) solid;
+  outline-offset: 4px;
+}
+/* Main */
+main{
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+}
+main p{
+  max-width: 75ch;
+}
+section{
+  padding: 2rem 0rem;
+}
+#story h2, #try-it h2{
+  color: var(--graphite);
+}
+/* Recipe Card */
+.recipe-card {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--old-lace);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 15px 15px var(--salmon);
+  border: 2px solid var(--salmon);
+}
+/* Ingredients */
+#ingredients .recipe-card{
+  gap: 8rem;
+}
+.ingredient-list{
+  list-style: none;
+  accent-color: var(--burnt-orange);
+  padding-left: 0;
+}
+/* Recipe Images */
+.recipe-image{
+  width: 100%;
+  border-radius: 10px;
+}
+.recipe-card .recipe-image{
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.image-container{
+  margin: 0;
+}
+/* Card layout and hover */
+.card-cover, .card-content{
+  flex: 1;
+  transition: ease-in-out 0.5s;
+}
+.recipe-card:hover .card-cover{
+  flex: 0.5;
+}
+/* Try it Image */
+#try-it .recipe-image{
+  aspect-ratio: 16/19;
+  object-fit: cover;
+  object-position: bottom;
+}
+/* CTA */
+.cta-button{
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--graphite);
+  border-radius: 30px;
+  color: var(--old-lace);
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 1rem;
+  transition: ease 0.5s;
+}
+#try-it{
+  text-align: center;
+}
+#try-it p{
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-button:hover{
+  color: var(--honey-bronze);
+  transform: translateY(-5px);
+}
+.cta-button:focus{
+  outline: 3px var(--graphite) solid;
+  outline-offset: 4px;
+}
+/* Footer */
+#page-footer{
+  color: var(--old-lace);
+  padding: 40px;
+  background-color: var(--graphite);
+  text-align: center;
+}
+.footer-link {
+  transition: ease 0.5s;
+  color: var(--old-lace);
+  display: inline-block;
+}
+.footer-link:hover{
+  color: var(--honey-bronze);
+  transform: translateY(-5px);
+}
+.footer-link:focus{
+  outline: 3px var(--honey-bronze) solid;
+  outline-offset: 4px;
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .recipe-card{
+    flex-direction: column;
+  }
+  /* Navigation */
+  .nav-list{
+    flex-wrap: wrap;
+  }
+  /* Ingredients */
+  #ingredients .recipe-card{
+    gap: 2rem;
+  }
+}
